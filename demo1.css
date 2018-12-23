@@ -1,0 +1,491 @@
+﻿/*
+* @Author: hp
+* @Date:   2018-12-19 18:46:07
+* @Last Modified by:   hp
+* @Last Modified time: 2018-12-23 12:02:20
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li,ol{
+ 	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 头悬浮框 */
+#cover{
+	width: 100%;
+	height: 120px;
+	background-color: #fff;
+	z-index: 3;
+}
+#cover1{
+	margin: 0 auto;
+	width: 1200px;
+	height: 49px;
+}
+.cover-top1{
+	color: #9a9791;
+	font-size: 14px;
+	margin-right: 18px;
+}
+#limg,#limg1,#limg2,#limg3,#limg4,#limg5,#limg6,#limg7{
+	width: 19px;
+	height: 20px;
+	float: right;
+	display: inline-block;
+	background-image: url("img/common_min.png");
+	background-position: 0 -74px;
+	margin-right: 18px;
+}
+#limg1{
+	background-position: 0 -52px;
+}
+#limg2{
+	background-position: 0 -30px;
+}
+#limg3{
+	background-position: 0 -111px;
+	margin-right: 2px
+}
+#limg4{
+	background-image: url("img/dingdan.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 2px
+}
+#limg5{
+	background-image: url("img/tp-my-phone.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 0
+}
+#limg6{
+	background-image: url("img/gouwuche.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 2px;
+}
+#limg7{
+	background-image: none;
+	font-weight: bolder;
+	color: #fe6c00;
+	margin-left: -10px
+}
+#cover-mid{
+	width: 1200px;
+	height: 94px;
+	margin-top: 10px;
+	margin-right: 80px;
+}
+#cover-mid-left{
+	width: 175px;
+	height: 94px;
+	background-image: url('img/logo_03.jpg');
+	background-repeat: no-repeat;
+	padding-right: 80px;
+	float: left;
+}
+#cover-mid-mid{
+	width: 600px;
+	height: 94px;
+	margin-top: 15px;
+	display: inline-block;
+}
+#cover-mid-mid1{
+	width: 517px;
+	height: 37px;
+	border: 2px solid #fe6c00;
+	border-radius: 2px;
+	display: inline-block;
+}
+#cover-mid-mid2{
+	width: 79px;
+	height: 31px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	background-color: #fe6c00;
+	border: 5px;
+	float: right;
+	border-radius: 2px;
+}
+#cover-mid-mid3>li{
+	width: 52px;
+	height: 21px;
+	font-size: 10px;
+	text-align: center;
+	margin-top: 3px;
+	padding-right: 2px;
+	display: inline-block;
+	border-right: 1px solid #ebe7e7;
+	
+}
+#cover-mid-mid3>li:last-child{
+	border-right: 0;
+	width: 30px
+}
+#cover-mid-right{
+	width: 234px;
+	height: 42px;
+	float: right;
+	margin-top: 10px;
+}
+#cover-mid-right1,#cover-mid-right2{
+	width: 75px;
+	height: 46px;
+	border: 1px solid #e6e5e2;
+	display: inline-block;
+	float: left;
+}
+#cover-mid-right1>div{
+	width: 19px;
+	height: 20px;
+	background-image: url("img/common_min.png");
+	background-position: 0 -94.3px;
+	margin: 0 auto;
+	margin-top: 2px;
+}
+#cover-mid-right2>div{
+	width: 19px;
+	height: 20px;
+	background-image: url("img/common_min.png");
+	background-position: 0 -112px;
+	margin: 0 auto;
+	margin-top: 2px;
+}
+#cover-mid-right3{
+		width: 75px;
+		height: 36px;
+		border: 1px solid #e6e5e2;
+		display: inline-block;
+		float: left;
+		background-color: #ff4d04;
+		padding-top: 10px;
+}
+/*头部悬框结束*/
+/*中间部分*/
+#list{
+	width: 100%;
+	height: 42px;
+	background-color: #000;
+}
+#top{
+	width: 1200px;
+	height: 42px;
+	margin: 0 auto;
+}
+#top1>li{
+	width: 94px;
+	height: 32px;
+	color: #fff;
+	font-size: 14px;
+	/* padding-top: 10px; */
+	margin-left: 30px;
+	text-align: center;
+	display: inline-block;
+}
+#top1>li:first-child{
+	background-color: #fe0d4a;
+	margin-left: 0;
+	margin-top: 0;
+	border-top: 10px solid #fe0d4a;
+}
+#middle1{
+	width: 100%;
+	height: 780px;
+	background-color: #f6f5f4;
+	position: static;
+}
+#bigimg{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: #d0cdc7;
+	opacity: 0.7;
+	position: fixed;
+	top: 0;
+	left: -20px;
+}
+#bigimg1{
+	width: 500px;
+	height: 280px;
+	border:2px solid #aca9d3;
+	z-index: -1;
+	position: fixed;
+	top:255px;
+	left: 500px;
+	background-color: #fff;
+}
+#butt1{
+	width: 160px;
+	height: 28px;
+	margin-top: 20px;
+	margin-left:50px;
+	border: 1px solid #fe0952;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #fe0952;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
+	display: inline-block;
+}
+#butt2{
+	width: 160px;
+	height: 28px;
+	margin-top: 20px;
+	margin-left: 45px;
+	border: 1px solid #fe0952;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #fe0952;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#middle{
+	width: 1200px;
+	height: 821px;
+	margin: 0 auto;
+}
+#middle>p{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 21px;
+	font-size: 14px;
+	margin: 0 auto;
+}
+#middle-all{
+	width: 1200px;
+	height: 631px;
+}
+#middle-all-left{
+	width: 1000px;
+	height: 635px;
+	float: left;
+	position: relative;
+	background-color: #fff;
+}
+#pic{
+	width: 450px;
+	height: 635px;
+	margin: 0;
+}
+#pictop{
+	width: 410px;
+	height: 410px;
+	border: 1px solid #d0cdc7;
+	margin: 10px 10px;
+	position: relative;
+	float: left;
+}
+#slider{
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:#CCC;
+	opacity:0.6;
+	cursor: move;
+	display:none; 
+}
+#picright{
+	position:absolute;
+	left:430px;
+	top:10px;
+	display:none; 
+	width:410px;
+	height:410px;
+	overflow:hidden;
+	border: 1px dotted purple;
+}
+#p2,#p3{
+	position:absolute;
+	left:0;
+	top:0;
+}
+#pic-bot{
+	width: 420px;
+	height: 80px;
+	position: absolute;
+	top: 460px;
+	margin-left: 10px;
+}
+#pic-bot>div{
+	margin-top: 5px;
+	display: inline-block;
+}
+#pic-bot>div:last-child{
+	float: right;
+}
+#content{
+	width: 500px;
+	height: 466px;
+	margin: 10px 10px;
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+#con-top{
+	width: 500px;
+	height: 132px;
+}
+#con1{
+	width: 62px;
+	height: 22px;
+	border: 1px solid #fe0952;
+	display: inline-block;
+	margin-left: 30px;
+	text-align: center;
+	padding-top: 8px;
+	background: url('img/duigou.png') no-repeat 50px 17px;
+}
+#con2{
+	width: 62px;
+	height: 22px;
+	display: inline-block;
+	margin-left: 30px;
+	text-align: center;
+	padding-top: 8px;
+}
+#con3{
+	color: #ff9003;
+}
+#but1,#but3{
+	width: 25px;
+	height: 24px;
+	border: 1px solid #aca7a2;
+	display: inline-block;
+	text-align: center;
+	padding-top: 5px;
+}
+#but2{
+	width: 50px;
+	height: 25px;
+	border: 1px solid #aca7a2;
+	display: inline-block;
+	text-align: center;
+	padding-top: 5px;
+}
+#butt{
+	width: 427px;
+	height: 40px;
+}
+#butt>div{
+	display: inline-block;
+}
+#conbutt1{
+	width: 150px;
+	height: 28px;
+	margin-top: 20px;
+	border: 1px solid #fe0952;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #fe0952;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#conbutt2{
+	width: 150px;
+	height: 28px;
+	margin-top: 20px;
+	margin-left: 15px;
+	border: 1px solid #fe0952;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #fe0952;
+	cursor: pointer;
+}
+#middle-all-right{
+	width: 195px;
+	height: 635px;
+	float: left;
+	margin-left:5px; 
+}
+#middle-bot{
+	width: 1200px;
+	height: 100px;
+}
+/*中间部分结束*/
+/*尾部*/
+#bottom{
+	width: 100%;
+	height: 340px;
+	background-color: #f8f7f6;
+}
+#bot-left{
+	width: 170px;
+	height: 150px;
+	float: left;
+}
+#bot-right{
+	width: 1030px;
+	height: 180px;
+	float: left;
+	border-bottom: 1px solid #ebeae8;
+}
+#bot-right>ul{
+	width: 78px;
+	height: 160px;
+	margin-left: 50px;
+	display: inline-block;
+	margin-top: 45px;
+	font-size: 12px;
+	color: #666560;
+	float: left;
+}
+#bot-right>ul>li{
+	margin-bottom: 10px;
+}
+#bot-right>ul>li:first-child{
+	font-size: 14px;
+	font-weight: bolder;
+}
+#bot-bot{
+	width: 1200px;
+	height: 165px;
+	float: left;
+}
+#bot-bot>ul{
+	width: 658px;
+	height: 28px;
+	margin: 0 auto;
+}
+#bot-bot>ul>li{
+	width: 52px;
+	height: 21px;
+	font-size: 10px;
+	text-align: center;
+	margin-top: 15px;
+	padding-right: 2px;
+	display: inline-block;
+	border-right: 1px solid #ebe7e7;
+	color: #666560;
+}
+#bot-bot>li:last-child{
+	border-right: 0;
+}
+#bot-bot>p{
+	width: 658px;
+	height: 10px;
+	margin: 0 auto;
+	font-size: 10px;
+	margin-top: 10px;
+	color: #666560;
+}
+#bot-bot>div>img{
+	display: inline-block;
+}
+/*尾部结束*/
