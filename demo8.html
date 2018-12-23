@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#left{
+			width: 349px;
+			border: 10px solid #ffff24;
+			margin-left: 100px;
+			float: left;
+		}
+		#right{
+			width: 373px;
+			height: 230px;
+			border: 10px solid #ffbdc4;
+			margin-left: 500px;
+			margin-top: 50px;
+		}
+		#top,#bottom{
+			width: 349px;
+			height: 53px;
+			border-style: none;
+			font-size: 18px;
+			color: #fff;
+			text-align: center;
+			background: #6b0e2e;
+			margin-top: 10px;
+			margin-left: 12px;
+		}
+		h3{
+			margin-top: 15px;
+			margin-left: 12px;
+			float: left;
+		}
+		p{
+			font-size: 14px;
+			margin-top: 20px;
+			margin-left: 3px;
+			display: inline;
+
+		}
+		#h,#min{
+			margin-top: 20px;
+		}
+		#right>input{
+			width: 349px;
+			height: 33px;
+			margin-left: 12px;
+
+		}
+		#add{
+			width: 349px;
+			height: 50px;
+			margin-top: 5px;
+		}
+		li{
+			width: 129px;
+			height: 50px;
+			list-style-image: url('./第八次作业/clock.png');
+			float: right;
+			text-align: center;
+		}
+		.time{
+			font-size: 10px;
+			color:#7d8e9a;
+			margin-left: 30px;
+			margin-top: 5px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="left">
+		<div  id="add">
+			<input type="checkbox" name="add">
+			<p>任务一</p>
+			<li>01:00</li>
+			<p class="time"></p>
+		</div>
+		<div  id="add">
+			<input type="checkbox" name="add">
+			<p>任务二</p>
+			<li>01:30</li>
+			<p class="time"></p>
+		</div>
+		<div  id="add">
+			<input type="checkbox" name="add">
+			<p>任务三</p>
+			<li>03:00</li>
+			<p class="time"></p>
+		</div>
+	</div>
+	<div id="right">
+		<button id="top" onclick="del();">删除选中的任务</button>
+		<h3>添加任务：</h3>
+		<p>时：</p>
+		<select id="h">
+			<option value="0">00</option>
+		</select>
+		<p>分：</p>
+		<select id="min">
+			<option value="0">00</option>
+		</select>
+		<br>
+		<input type="text" id="ad" value="请填写任务详情"/>
+		<button id="bottom">添加任务</button>
+	</div>
+</body>
+	<script>
+		//任务完成小时，分
+		var h=document.getElementById('h');
+		var min=document.getElementById('min');
+		h.onfocus = function (){
+			h.options.length = 1;
+            for (var i = 1; i < 24; i++) 
+            {
+            	if (i<10) {
+            		h.add(new Option('0'+i, i));
+            	} else {
+            		h.add(new Option(i, i));
+            	}
+            }
+        };
+        min.onfocus = function(){
+        	min.options.length=1;
+        	for (var i = 1; i < 60; i++) 
+            {
+                if (i<10) {
+            		min.add(new Option('0'+i, i));
+            	} else {
+            		min.add(new Option(i, i));
+            	}
+            }
+        }
+        
+        //发布任务的时间
+        function newTime(){
+			var t = new Date();
+			var y,m,d,h,min,s,timer;
+			 y=t.getFullYear();
+			 m=t.getMonth()+1;
+			 d=t.getDate();
+			 h=t.getHours();
+			 min=t.getMinutes();
+			 if(m<10)
+			 	m='0'+m;
+			 if(d<10)
+			 	d='0'+d;
+			 if(h<10)
+			 	h='0'+h;
+			 if(min<10)
+			 	min='0'+min;
+			return timer=y+'/'+m+'/'+d+'/'+'  '+h+':'+min;
+		}
+		var tt=newTime();
+		var time = document.getElementsByClassName("time");
+		for (var i = 0;i < time.length; i++) {
+			time[i].innerHTML='发布于'+tt;
+		}
+
+		//删除、添加新任务
+		var top=document.getElementById('top');
+		var bottom=document.getElementById('bottom');
+		var ad=document.getElementById('ad');
+		function del(){
+			var checked = document.getElementsByName('add');
+			for(var i = 0; i < checked.length; i++){
+				if(checked[i].checked){
+					var tr=checked[i].parentNode; 
+					var tbody=tr.parentNode; 
+					tbody.removeChild(tr);
+					i--; 
+				}
+			}
+		}
+
+		bottom.onclick=function(){
+			var left=document.getElementById("left");
+			var div=document.createElement('div');
+			var input=document.createElement('input');
+			var li=document.createElement('li');
+			var p=document.createElement('p');
+			var pp=document.createElement('p');
+			div.id='add';
+			input.type='checkbox';
+			input.name='add';
+			pp.innerHTML=ad.value;
+			p.class='time';
+			p.innerHTML='发布于'+newTime();
+			if (h.value<10 && min.value<10) {
+				li.innerHTML='0'+h.value+':'+'0'+min.value;
+			}else if(h.value<10&&min.value>=10){
+				li.innerHTML='0'+h.value+':'+min.value;
+			}else if(h.value>=10&&min.value<10){
+				li.innerHTML=h.value+':'+'0'+min.value;
+			}else{
+				li.innerHTML=h.value+':'+min.value;
+			}
+			div.appendChild(input);
+			div.appendChild(pp);
+			div.appendChild(li);
+			div.appendChild(p);
+			left.appendChild(div);
+			p.setAttribute('style', 'font-size:10px;color:#7d8e9a;margin-left:30px;display:block;margin-top:5px;');
+			ad.value='请填写任务详情';
+			h.value='0';
+			min.value='0';
+		} 
+	</script>
+</html>
