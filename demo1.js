@@ -2,7 +2,7 @@
 * @Author: hp
 * @Date:   2018-12-19 18:46:19
 * @Last Modified by:   hp
-* @Last Modified time: 2018-12-23 11:28:42
+* @Last Modified time: 2018-12-28 14:03:13
 */
 
 /*图片更换*/
@@ -157,9 +157,10 @@ pictop.onmouseout=function(){
 }
 pictop.onmousemove=function(ev){
 	var ev=ev||window.event;
+	var offset=document.documentElement.scrollTop;
 	if (p0.style.zIndex=="0") {
-		var left = ev.clientX-pic.offsetLeft-190-slider.offsetWidth/2;
-		var top = ev.clientY-pic.offsetTop-190-slider.offsetHeight/2;
+		var left = ev.clientX-pic.offsetLeft-203-slider.offsetWidth/2;
+		var top = ev.clientY-pic.offsetTop-190-slider.offsetHeight/2+offset;
 		var maxLeft=p0.offsetWidth-slider.offsetWidth;
 		var maxTop=p0.offsetHeight-slider.offsetHeight;
 		left=left>maxLeft?maxLeft:left<0?0:left;
@@ -178,8 +179,8 @@ pictop.onmousemove=function(ev){
 		p2.style.left=w*p2Left+"px";
 		p2.style.top=h*p2Top+"px";
 	} else {
-		var left = ev.clientX-pic.offsetLeft-190-slider.offsetWidth/2;
-		var top = ev.clientY-pic.offsetTop-190-slider.offsetHeight/2;
+		var left = ev.clientX-pic.offsetLeft-203-slider.offsetWidth/2;
+		var top = ev.clientY-pic.offsetTop-190-slider.offsetHeight/2+offset;
 		var maxLeft=p1.offsetWidth-slider.offsetWidth;
 		var maxTop=p1.offsetHeight-slider.offsetHeight;
 		left=left>maxLeft?maxLeft:left<0?0:left;
