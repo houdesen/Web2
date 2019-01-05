@@ -1,8 +1,8 @@
 /*
 * @Author: hp
 * @Date:   2018-12-19 18:46:19
-* @Last Modified by:   hp
-* @Last Modified time: 2018-12-28 14:03:13
+* @Last Modified by:   houdesen
+* @Last Modified time: 2019-01-05 20:01:02
 */
 
 /*图片更换*/
@@ -14,7 +14,7 @@ var p3=document.getElementById('p3');
 var pp2=document.getElementById('pp2');
 var pp0=document.getElementById('pp0');
 var pp3=document.getElementById('pp3');
-pp1.onclick=function(){
+pp1.onmouseover=function(){
 	pp1.style.border=" 1px solid #ff9003";
 	p0.style.zIndex="0";
 	p1.style.zIndex="-1";
@@ -25,7 +25,7 @@ pp1.onclick=function(){
 	}
 }
 
-pp2.onclick=function(){
+pp2.onmouseover=function(){
 	pp2.style.border=" 1px solid #ff9003";
 	p0.style.zIndex="-1";
 	p1.style.zIndex="0";
