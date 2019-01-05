@@ -2,7 +2,7 @@
 * @Author: hp
 * @Date:   2018-12-19 18:46:19
 * @Last Modified by:   houdesen
-* @Last Modified time: 2019-01-05 20:01:02
+* @Last Modified time: 2019-01-05 21:13:02
 */
 
 /*图片更换*/
@@ -16,24 +16,20 @@ var pp0=document.getElementById('pp0');
 var pp3=document.getElementById('pp3');
 pp1.onmouseover=function(){
 	pp1.style.border=" 1px solid #ff9003";
+	pp2.style.border=" 0px solid #ff9003";
 	p0.style.zIndex="0";
 	p1.style.zIndex="-1";
 	p2.style.zIndex="1";
 	p3.style.zIndex="0";
-	pp1.onmouseout=function(){
-		pp1.style.border=" 0px solid #ff9003";
-	}
 }
 
 pp2.onmouseover=function(){
+	pp1.style.border=" 0px solid #ff9003";
 	pp2.style.border=" 1px solid #ff9003";
 	p0.style.zIndex="-1";
 	p1.style.zIndex="0";
 	p2.style.zIndex="0";
 	p3.style.zIndex="1";
-	pp2.onmouseout=function(){
-		pp2.style.border=" 0px solid #ff9003";
-	}
 }
 pp0.onclick=function(){
 	if (p0.style.zIndex=="-1") {
